@@ -1,8 +1,3 @@
-package Heranca.retangulo;
-
-import Heranca.retangulo.FormaGeometrica;
-import Heranca.retangulo.Retangulo;
-
 public class Program {
     public static void main(String[] args) {
         Retangulo retangulo = new Retangulo();
