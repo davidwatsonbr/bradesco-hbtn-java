@@ -10,6 +10,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Heranca/retangulo" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Heranca/retangulo_completo" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Heranca/salario" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Heranca_Exercicios/pedido_livraria" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
