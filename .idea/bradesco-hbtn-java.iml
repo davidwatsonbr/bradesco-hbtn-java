@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Heranca/forma" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Heranca/heranca" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Heranca/retangulo" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Heranca/retangulo_completo" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Heranca/salario" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
