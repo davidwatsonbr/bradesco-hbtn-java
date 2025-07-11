@@ -1,5 +1,7 @@
 package Heranca.forma;
 
+import Heranca.forma.FormaGeometrica;
+
 public class Program {
     public static void main(String[] args) {
         FormaGeometrica formaGeometrica = new FormaGeometrica();

@@ -1,6 +1,6 @@
 package Heranca.retangulo;
 
-import Heranca.forma.FormaGeometrica;
+import Heranca.retangulo.FormaGeometrica;
 import Heranca.retangulo.Retangulo;
 
 public class Program {

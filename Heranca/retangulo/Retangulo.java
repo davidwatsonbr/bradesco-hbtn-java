@@ -1,6 +1,6 @@
 package Heranca.retangulo;
 
-import Heranca.forma.FormaGeometrica;
+import Heranca.retangulo.FormaGeometrica;
 
 public class Retangulo extends FormaGeometrica {
 
