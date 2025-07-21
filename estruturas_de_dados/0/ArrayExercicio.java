@@ -22,7 +22,10 @@ public class ArrayExercicio {
             System.out.print("Digite o número " + (i + 1) + ": ");
             numeros[i] = scanner.nextInt();
             soma += numeros[i];
-            maiorNumero = (numeros[i] > maiorNumero ? numeros[i] : maiorNumero);
+
+            if (numeros[i] > maiorNumero) {
+                maiorNumero = numeros[i];
+            }
         }
 
         // Exibindo os resultados
