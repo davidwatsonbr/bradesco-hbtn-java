@@ -13,7 +13,6 @@ public class GerenciamentoDeContatos {
     public void adicionarContato(String nome, String telefone, String email) {
         if (contatos.containsKey(nome)) {
             System.out.println(String.format("Erro: Contato com nome %s já existe!", nome));
-            System.out.println();
         } else {
             Contato contato = new Contato();
             contato.adicionarTelefone(telefone);
@@ -40,7 +39,6 @@ public class GerenciamentoDeContatos {
             Contato contato = contatos.get(nome);
             System.out.println(String.format("Telefones: %s", contato.getTelefones()));
             System.out.println(String.format("Emails: %s", contato.getEmails()));
-            System.out.println();
         }
     }
 
@@ -49,11 +47,9 @@ public class GerenciamentoDeContatos {
     public void removerContato(String nome) {
         if (!this.contatos.containsKey(nome)) {
             System.out.println(String.format("Contato %s não encontrado.", nome));
-            System.out.println();
         } else {
             contatos.remove(nome);
             System.out.println(String.format("Contato %s removido com sucesso!", nome));
-            System.out.println();
         }
     }
 
