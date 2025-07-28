@@ -1,0 +1,4 @@
+Este ?? um exemplo de arquivo de texto.
+Cada linha cont??m uma mensagem diferente.
+Voc?? est?? aprendendo a manipular arquivos com Java!
+Parab??ns por avan??ar nos seus estudos!
