@@ -20,9 +20,7 @@ public class ListaTodo {
     }
 
     public boolean marcarTarefaFeita(int identificador) {
-        Iterator<Tarefa> i = tarefas.iterator();
-        while (i.hasNext()) {
-            Tarefa tarefaItem = i.next();
+        for (Tarefa tarefaItem : tarefas) {
             if (tarefaItem.getIdentificador() == identificador) {
                 tarefaItem.setEstahFeita(true);
                 return true;
@@ -32,9 +30,7 @@ public class ListaTodo {
     }
 
     public boolean desfazerTarefa(int identificador) {
-        Iterator<Tarefa> i = tarefas.iterator();
-        while (i.hasNext()) {
-            Tarefa tarefaItem = i.next();
+        for (Tarefa tarefaItem : tarefas) {
             if (tarefaItem.getIdentificador() == identificador) {
                 tarefaItem.setEstahFeita(false);
                 return true;
@@ -58,12 +54,11 @@ public class ListaTodo {
     }
 
     public void listarTarefas() {
-        Iterator<Tarefa> i = tarefas.iterator();
-        StringBuilder sb = new StringBuilder();
-        while (i.hasNext()) {
-            Tarefa tarefaItem = i.next();
-            sb.append(String.format("[%s]  Id: %s - Descricao: %s\n", tarefaItem.getEstahFeita() ? "X" : " ", tarefaItem.getIdentificador(), tarefaItem.getDescricao()));
+        for (Tarefa tarefaItem : tarefas) {
+            System.out.printf("[%s]  Id: %d - Descricao: %s\n",
+                tarefaItem.getEstahFeita() ? "X" : " ",
+                tarefaItem.getIdentificador(),
+                tarefaItem.getDescricao());
         }
-        System.out.println(sb);
     }
 }
