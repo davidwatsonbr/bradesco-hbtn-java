@@ -13,7 +13,7 @@ public class ListaTodo {
         while (i.hasNext()) {
             Tarefa tarefaItem = i.next();
             if (tarefaItem.getIdentificador() == tarefa.getIdentificador()) {
-                throw new RuntimeException(String.format("Tarefa com identificador %s ja existente na lista", tarefa.getIdentificador()));
+                throw new IllegalArgumentException(String.format("Tarefa com identificador %s ja existente na lista", tarefa.getIdentificador()));
             }
         }
         tarefas.add(tarefa);
