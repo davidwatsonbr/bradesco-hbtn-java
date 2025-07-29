@@ -4,6 +4,8 @@ import java.util.TreeSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class Blog {
     List<Post> postagens;
@@ -26,9 +28,9 @@ public class Blog {
 
     public Map<String, Integer> obterContagemPorCategoria() {
         Map<String, Integer> contagemPorCategoria = new TreeMap<>();
-        System.out.println("Quantidade: " + postagens.stream().map(c -> c.getCategoria()).count());
         for (Post postagem : postagens) {
-            contagemPorCategoria.put(postagem.getCategoria(), 10);
+            String categoria = postagem.getCategoria();
+            contagemPorCategoria.put(categoria, contagemPorCategoria.getOrDefault(categoria, 0) + 1);
         }
         return contagemPorCategoria;
     }
