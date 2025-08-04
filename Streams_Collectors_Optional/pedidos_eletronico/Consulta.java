@@ -23,8 +23,5 @@ public class Consulta {
     }
 
     public static List<Pedido> obterPedidosComEletronicos(List<Pedido> pedidos) {
-        return pedidos.stream()
-            .anyMatch(p -> p.getProdutos().getCategoria().equals(CategoriaProduto.ELETRONICO))
-            .collect(Collectors.toList());
     }
 }
