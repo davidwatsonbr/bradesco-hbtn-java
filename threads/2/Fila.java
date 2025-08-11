@@ -24,7 +24,7 @@ public class Fila {
         }
         int item = fila.removeFirst();
         System.out.println("Consumido: " + item + " | Tamanho da fila: " + fila.size());
-        notify();
+        notifyAll();
         return item;
     }
 }
