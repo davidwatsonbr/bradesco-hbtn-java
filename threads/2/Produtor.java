@@ -18,7 +18,7 @@ public class Produtor extends Thread {
             }
         }
         catch (InterruptedException e) {
-            System.out.println("Produtor interrompido.");
+            System.out.println("Produtor " + getName() + " interrompido.");
         }
     }
 }

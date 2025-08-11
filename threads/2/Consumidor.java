@@ -15,7 +15,7 @@ public class Consumidor extends Thread {
             }
         }
         catch (InterruptedException e) {
-            System.out.println("Consumidor interrompido.");
+            System.out.println("Consumidor " + getName() + " interrompido.");
         }
     }
 }
