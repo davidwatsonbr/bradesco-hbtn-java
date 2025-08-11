@@ -16,6 +16,10 @@ public class SistemaFilas {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        produtor1.interrupt();
+        produtor2.interrupt();
+        consumidor1.interrupt();
+        consumidor2.interrupt();
         System.out.println("Encerrando o sistema...");
         System.exit(0);
     }
