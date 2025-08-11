@@ -9,27 +9,21 @@ public class Fila {
         fila = new LinkedList<>();
     }
 
-    public boolean estaCheia() {
-        return fila.size() >= capacidadeMaxima;
-    }
-
-    public boolean estaVazia() {
-        return fila.isEmpty();
-    }
-
     public synchronized void adicionar(int item) throws InterruptedException {
-        while (estaCheia()) {
+        while (fila.size() >= capacidadeMaxima) {
             wait();
         }
         fila.add(item);
+        System.out.println("Produzido: " + item + " | Tamanho da fila: " + fila.size());
         notifyAll();
     }
 
     public synchronized int retirar() throws InterruptedException {
-        while (estaVazia()) {
+        while (fila.size() == 0) {
             wait();
         }
-        int item = fila.removeFirst();
+        int item = fila.removeLast();
+        System.out.println("Consumido: " + item + " | Tamanho da fila: " + fila.size());
         notifyAll();
         return item;
     }

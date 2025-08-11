@@ -18,5 +18,6 @@ public class SistemaFilas {
         } finally {
             System.exit(0);
         }
+        System.out.println("Encerrando o sistema...");
     }
 }

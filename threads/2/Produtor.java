@@ -13,12 +13,11 @@ public class Produtor extends Thread {
             while (true) {
                 int item = new Random().nextInt(1, 100);
                 fila.adicionar(item);
-                System.out.println("Produtor adicionou: " + item);
                 Thread.sleep(1000);
             }
         }
         catch (InterruptedException e) {
-            e.printStackTrace();
+            System.out.println("Produtor interrompido.");
         }
     }
 }

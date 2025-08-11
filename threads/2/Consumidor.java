@@ -10,12 +10,11 @@ public class Consumidor extends Thread {
         try {
             while (true) {
                 int item = fila.retirar();
-                System.out.println("Consumidor retirou: " + item);
                 Thread.sleep(500);
             }
         }
         catch (InterruptedException e) {
-            e.printStackTrace();
+            System.out.println("Consumidor interrompido.");
         }
     }
 }
