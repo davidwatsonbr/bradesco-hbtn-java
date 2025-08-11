@@ -1,3 +1,35 @@
-public class Fila {
+import java.util.LinkedList;
 
+public class Fila {
+    private int capacidadeMaxima;
+    private LinkedList<Integer> fila;
+
+    public Fila(int capacidadeMaxima) {
+        this.capacidadeMaxima = capacidadeMaxima;
+        fila = new LinkedList<>();
+    }
+
+    public boolean estaCheia() {
+        return fila.size() >= capacidadeMaxima;
+    }
+
+    public boolean estaVazia() {
+        return fila.isEmpty();
+    }
+
+    public synchronized void adicionar(int item) {
+        while (estaCheia()) {
+            wait();
+        }
+        fila.add(item);
+        notifyAll();
+    }
+
+    public synchronized void retirar() {
+        while (estaVazia()) {
+            wait();
+        }
+        fila.removeFirst();
+        notifyAll();;
+    }
 }

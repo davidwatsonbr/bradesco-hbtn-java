@@ -1,3 +1,4 @@
-public class Consumidor {
-
+public class Consumidor extends Thread {
+    @Override
+    public void run() {}
 }
