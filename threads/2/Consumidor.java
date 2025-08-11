@@ -10,6 +10,7 @@ public class Consumidor extends Thread {
         try {
             while (true) {
                 int item = fila.retirar();
+                System.out.println("Consumidor consumiu item: " + item);
                 Thread.sleep(500);
             }
         }
