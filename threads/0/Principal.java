@@ -1,11 +1,19 @@
 public class Principal {
-    Contador contador = new Contador();
-    ThreadContador thread1 = new ThreadContador(contador);
-    ThreadContador thread2 = new ThreadContador(contador);
- 
-    thread1.run();
-    thread2.run();
+    public static void main(String[] args) {
+        Contador contador = new Contador();
+        ThreadContador thread1 = new ThreadContador(contador);
+        ThreadContador thread2 = new ThreadContador(contador);
 
-    System.out.println("1 -> contagem: " + thread1.getContagem());
-    System.out.println("2 -> contagem: " + thread2.getContagem());
+        thread1.start();
+        thread2.start();
+        
+        try {
+            thread1.join();
+            thread2.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("Valor final do contador: " + contador.getContagem());
+    }
 }
