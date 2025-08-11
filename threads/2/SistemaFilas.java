@@ -13,13 +13,10 @@ public class SistemaFilas {
 
         try {
             Thread.sleep(20000);
+            System.out.println("Encerrando o sistema...");
+            System.exit(0);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Encerrando o sistema...");
-        produtor1.interrupt();
-        produtor2.interrupt();
-        consumidor1.interrupt();
-        consumidor2.interrupt();
     }
 }
