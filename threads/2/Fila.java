@@ -17,7 +17,7 @@ public class Fila {
         return fila.isEmpty();
     }
 
-    public synchronized void adicionar(int item) {
+    public synchronized void adicionar(int item) throws InterruptedException {
         while (estaCheia()) {
             wait();
         }
@@ -25,7 +25,7 @@ public class Fila {
         notifyAll();
     }
 
-    public synchronized void retirar() {
+    public synchronized void retirar() throws InterruptedException {
         while (estaVazia()) {
             wait();
         }
