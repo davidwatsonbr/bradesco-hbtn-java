@@ -15,8 +15,8 @@ public class SistemaFilas {
             Thread.sleep(20000);
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } finally {
+            System.exit(0);
         }
-
-        System.exit(0);
     }
 }
