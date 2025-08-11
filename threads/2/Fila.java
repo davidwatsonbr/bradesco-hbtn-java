@@ -25,11 +25,12 @@ public class Fila {
         notifyAll();
     }
 
-    public synchronized void retirar() throws InterruptedException {
+    public synchronized int retirar() throws InterruptedException {
         while (estaVazia()) {
             wait();
         }
-        fila.removeFirst();
+        int item = fila.removeFirst();
         notifyAll();
+        return item;
     }
 }

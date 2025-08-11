@@ -9,7 +9,7 @@ public class Consumidor extends Thread {
     public void run() {
         try {
             while (true) {
-                fila.retirar();
+                int item = fila.retirar();
                 Thread.sleep(500);
             }
         }
