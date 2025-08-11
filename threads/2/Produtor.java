@@ -18,7 +18,7 @@ public class Produtor extends Thread {
             }
         }
         catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
+            e.printStackTrace();
         }
     }
 }
