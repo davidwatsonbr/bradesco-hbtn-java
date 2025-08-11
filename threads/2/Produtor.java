@@ -1,4 +1,4 @@
-import java.util.concurrent.ThreadLocalRandom;
+import java.util.Random;
 
 public class Produtor extends Thread {
     private Fila fila;
@@ -11,7 +11,7 @@ public class Produtor extends Thread {
     public void run() {
         try {
             while (true) {
-                int item = ThreadLocalRandom.current().nextInt(1, 101);
+                int item = new Random().nextInt(1, 100);
                 fila.adicionar(item);
                 System.out.println("Produtor adicionou: " + item);
                 Thread.sleep(1000);
