@@ -15,7 +15,7 @@ public class Fila {
         }
         fila.add(item);
         System.out.println("Produzido: " + item + " | Tamanho da fila: " + fila.size());
-        notify();
+        notifyAll();
     }
 
     public synchronized int retirar() throws InterruptedException {
