@@ -13,6 +13,7 @@ public class Produtor extends Thread {
             while (true) {
                 int item = new Random().nextInt(100) + 1;
                 fila.adicionar(item);
+                System.out.println(Thread.currentThread().getName() + " processando: " + item);
                 Thread.sleep(1000);
             }
         }
