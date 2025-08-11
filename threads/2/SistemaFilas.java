@@ -5,15 +5,18 @@ public class SistemaFilas {
         Produtor produtor2 = new Produtor(fila);
         Consumidor consumidor1 = new Consumidor(fila);
         Consumidor consumidor2 = new Consumidor(fila);
-        long tempoInicio = System.currentTimeMillis();
 
         produtor1.start();
         produtor2.start();
         consumidor1.start();
         consumidor2.start();
 
-        while (System.currentTimeMillis() - tempoInicio < 20000) {            
+        try {
+            Thread.sleep(20000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+
         System.exit(0);
     }
 }
