@@ -15,7 +15,7 @@ public class Fila {
         }
         fila.add(item);
         System.out.println("Produzido: " + item + " | Tamanho da fila: " + fila.size());
-        notify();
+        notifyAll();
     }
 
     public synchronized int retirar() throws InterruptedException {
@@ -24,7 +24,7 @@ public class Fila {
         }
         int item = fila.removeFirst();
         System.out.println("Consumido: " + item + " | Tamanho da fila: " + fila.size());
-        notify();
+        notifyAll();
         return item;
     }
 }
