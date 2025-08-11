@@ -15,9 +15,8 @@ public class SistemaFilas {
             Thread.sleep(20000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        } finally {
-            System.exit(0);
         }
         System.out.println("Encerrando o sistema...");
+        System.exit(0);
     }
 }

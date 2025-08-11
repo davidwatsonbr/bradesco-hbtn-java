@@ -11,7 +11,7 @@ public class Produtor extends Thread {
     public void run() {
         try {
             while (true) {
-                int item = new Random().nextInt(1, 100);
+                int item = new Random().nextInt(100) + 1;
                 fila.adicionar(item);
                 Thread.sleep(1000);
             }

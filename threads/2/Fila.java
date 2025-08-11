@@ -22,7 +22,7 @@ public class Fila {
         while (fila.size() == 0) {
             wait();
         }
-        int item = fila.removeLast();
+        int item = fila.removeFirst();
         System.out.println("Consumido: " + item + " | Tamanho da fila: " + fila.size());
         notifyAll();
         return item;
