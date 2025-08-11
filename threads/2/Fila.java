@@ -30,6 +30,6 @@ public class Fila {
             wait();
         }
         fila.removeFirst();
-        notifyAll();;
+        notifyAll();
     }
 }
