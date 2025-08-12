@@ -8,12 +8,11 @@ public class SistemaFilas {
 
         produtor1.start();
         produtor2.start();
-
+        Thread.sleep(5000);
+        consumidor1.start();
+        consumidor2.start();
         try {
-            Thread.sleep(5000);
-            consumidor1.start();
-            consumidor2.start();
-            Thread.sleep(15000);
+            Thread.sleep(20000);
             System.out.println("Encerrando o sistema...");
             System.exit(0);
         } catch (InterruptedException e) {
