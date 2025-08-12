@@ -12,7 +12,7 @@ public class SistemaFilas {
         consumidor1.start();
         consumidor2.start();
         try {
-            Thread.sleep(20000);
+            Thread.sleep(15000);
             System.out.println("Encerrando o sistema...");
             System.exit(0);
         } catch (InterruptedException e) {
